@@ -1,3 +1,13 @@
+:root {
+    --black:    #020303;
+    --violet:   #34264A;
+    --pink:     #B02055;
+    --red:      #DB4047;
+    --green:    #B9D190;
+    --blue:     #90B9D1;
+    --white:    #EDEFEE;
+}
+
 html {
     font-family: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     height: 100%;
@@ -5,10 +15,21 @@ html {
 
 body {
     height: 100%;
-    color: #030303;
-    background: linear-gradient(-45deg, #240047, #2D4586) fixed;
-    background-repeat: no-repeat;
+    color: #020303;
+    background: #34264A;
     margin: 0;
+}
+
+th {
+    white-space: nowrap;
+}
+
+a {
+    color: #90B9D1;
+}
+
+a:hover {
+    color: #b9d190;
 }
 
 .container {
@@ -37,19 +58,20 @@ body {
 .navbar-top {
   padding: 1rem;
   width: 100%;
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(176,32,85,0.5);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .card {
-    background-color: white;
     border: none;
     word-break: break-word;
     overflow: auto;
     border-radius: 0.5rem;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    background-color: rgba(0,0,0,0.25);
+    color: #EDEFEE;
+    border: 2px solid #B02055;
 }
 
 .card-body {
@@ -85,4 +107,43 @@ td {
 
 .w-100 {
     width: 100%;
+}
+
+/* Family Crest: AKA Simon */
+.crest {
+	fill-opacity: 0.1;
+}
+
+.crest:hover {
+	cursor: pointer;
+}
+
+.crest.hovered svg path {
+	fill-opacity: 0;
+	fill: #b9d190 !important;
+	stroke: #b9d190;
+	stroke-width: 2;
+	stroke-dasharray: 300;
+	stroke-dashoffset: 1000;
+	animation: draw 1.5s infinite linear;
+	animation-name: draw;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+@keyframes draw {
+  55% {
+    stroke-width: 2;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    stroke-width: 0.5;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-width: 0;
+    fill-opacity: 1;
+  }
 }
