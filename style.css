@@ -113,11 +113,13 @@ td {
 
 /* Family Crest: AKA Simon */
 .crest {
-	fill-opacity: 0.1;
+    fill-opacity: 0.1;
+    transition: all .3s cubic-bezier(0.680, -0.550, 0.265, 1.550);
 }
 
 .crest:hover {
-	cursor: pointer;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .crest.hovered svg path {
@@ -132,7 +134,7 @@ td {
 	animation-duration: 1.5s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
-	animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
 }
 
 @keyframes draw {
