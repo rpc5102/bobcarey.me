@@ -6,6 +6,7 @@
     --green:    #B9D190;
     --blue:     #90B9D1;
     --white:    #EDEFEE;
+    --radius:   12px;
 }
 
 html {
@@ -69,7 +70,7 @@ a:hover {
     border: none;
     word-break: break-word;
     overflow: auto;
-    border-radius: 0.5rem;
+    border-radius: var(--radius);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     background-color: rgba(0,0,0,0.25);
     color: #EDEFEE;
